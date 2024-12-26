@@ -69,7 +69,7 @@ import CustomStats from "./CustomStats";
 import type { RestoredDataState } from "../packages/excalidraw/data/restore";
 import { restore, restoreAppState } from "../packages/excalidraw/data/restore";
 import {
-  ExportToExcalidrawPlus,
+  // ExportToExcalidrawPlus,
   exportToExcalidrawPlus,
 } from "./components/ExportToExcalidrawPlus";
 import { updateStaleImageStatuses } from "./data/FileManager";
@@ -800,31 +800,31 @@ const ExcalidrawWrapper = () => {
             clearCanvas: false,
             toggleTheme: true,
             export: {
-              onExportToBackend,
-              renderCustomUI: excalidrawAPI
-                ? (elements, appState, files) => {
-                    return (
-                      <ExportToExcalidrawPlus
-                        elements={elements}
-                        appState={appState}
-                        files={files}
-                        name={excalidrawAPI.getName()}
-                        onError={(error) => {
-                          excalidrawAPI?.updateScene({
-                            appState: {
-                              errorMessage: error.message,
-                            },
-                          });
-                        }}
-                        onSuccess={() => {
-                          excalidrawAPI.updateScene({
-                            appState: { openDialog: null },
-                          });
-                        }}
-                      />
-                    );
-                  }
-                : undefined,
+              // onExportToBackend,
+              // renderCustomUI: excalidrawAPI
+              //   ? (elements, appState, files) => {
+              //       return (
+              //         <ExportToExcalidrawPlus
+              //           elements={elements}
+              //           appState={appState}
+              //           files={files}
+              //           name={excalidrawAPI.getName()}
+              //           onError={(error) => {
+              //             excalidrawAPI?.updateScene({
+              //               appState: {
+              //                 errorMessage: error.message,
+              //               },
+              //             });
+              //           }}
+              //           onSuccess={() => {
+              //             excalidrawAPI.updateScene({
+              //               appState: { openDialog: null },
+              //             });
+              //           }}
+              //         />
+              //       );
+              //     }
+              //   : undefined,
             },
           },
         }}

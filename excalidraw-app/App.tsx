@@ -799,6 +799,7 @@ const ExcalidrawWrapper = () => {
           canvasActions: {
             clearCanvas: false,
             toggleTheme: true,
+            saveAsImage: false,
             export: {
               // onExportToBackend,
               // renderCustomUI: excalidrawAPI
